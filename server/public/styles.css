@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.list-wrapper {
+    height: 550px;
+    overflow-y: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.activity {
+    font-style: italic;
+    color: #a370f0;
+}
+
+.post-center {
+    border-radius: 10px;
+    background-color: royalblue;
+    color: white;
+    margin: 1%;
+    text-align: center;
+}
+
+.post-right-container {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 40%;
+    margin-right: 2%;
+    border-radius: 10px;
+    border: 2px solid royalblue;
+}
+
+.post-right-header {
+    padding-top: 1%;
+    padding-left: 1%;
+    background-color:royalblue;
+    color: white;
+}
+
+.post-right-body {
+    padding: 1%;
+    word-wrap: break-word;
+    color: royalblue;
+}
+
+.post-left-container {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 40%;
+    margin-left: 2%;
+    border-radius: 10px;
+    border: 2px solid #a370f0;
+}
+
+.post-left-header {
+    padding-top: 1%;
+    padding-left: 1%;
+    background-color:#a370f0;
+    color: white;
+}
+
+.post-left-body {
+    padding: 1%;
+    word-wrap: break-word;
+    color: #a370f0;
+}
+
+.chat-display {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    padding: 1%;
+}
+
+.form-name-room {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#name {
+    margin-top: 1%;
+}
+
+#room{
+    margin-top: 1%;
+}
+
+.send-button {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;    
+}
+.send-button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.send-button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.send-button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.send-button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.send-button:hover span {
+    transform: translateX(5em);
+}
+
+.send-button:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+    transform: translateY(0.1em);
+    }
+
+    to {
+    transform: translateY(-0.1em);
+    }
+}
+
+.form-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 3%;
+    width: 100%;
+}
+
+#msg {
+    width: 70%;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    margin-right: 1%;
+    border-radius: 10px;
+}
+
+.cssbuttons-io-button {
+    margin-top: 3%;
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
