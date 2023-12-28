@@ -8,6 +8,7 @@
 
 ## Description
 - This project allows users to connect to chatrooms and they can have live conversations via text messages.
+- I made this project by following this youtube playlist about working with websockets: https://www.youtube.com/watch?v=J8xReLuBNPY&list=PL0Zuz27SZ-6NOkbTDxKi7grs_oxJhLu07&ab_channel=DaveGray
 
 ## Installation
 
