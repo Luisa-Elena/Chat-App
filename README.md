@@ -44,3 +44,25 @@ npm run dev
 
 ## Usage
 - A user must enter its username and the chatroom name of the room he wants to enter and chat with people.
+
+## Documentation
+#### Client side
+- User Interactions:
+    - Handles sending messages and entering rooms when users submit forms.
+    - Emits 'message' and 'enterRoom' events to the server.
+- Socket.IO Connection:
+    - Establishes a connection with the server using Socket.IO.
+    - Listens for 'message' and 'activity' events from the server.
+    - Emits 'activity', events when users type messages.
+    - Emits 'enterRoom' event when a user enters a room
+- UI Updates:
+    - Dynamically updates the UI based on received messages and user activities.
+    - Utilizes different message styles for the sender, receiver, and system messages.
+#### Server side
+- Server Setup:
+    - Creates an Express app and an HTTP server.
+    - Configures Socket.IO with CORS settings for client-server communication.
+- Socket.IO Connection Handling:
+    - Listens for 'connection' events and initializes communication with clients.
+    - Handles 'enterRoom', 'message', 'disconnect', and 'activity' events from clients.
+    - Manages user information, room changes, and disconnections.
